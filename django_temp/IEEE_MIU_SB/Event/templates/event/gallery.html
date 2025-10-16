@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="text-center fw-bold mt-5" style="color: #198754;">
+  Moments Captured from Our Events
+</h1>
+<p class="text-center text-muted mb-2">
+  A glimpse into the highlights, achievements, and memories we’ve made.
+</p>
+<div class="d-flex justify-content-center align-items-center mb-5">
+    <div
+      style="
+        height: 4px;
+        width: 60px;
+        background-color: #28a745;
+        margin-right: 8px;
+      "
+    ></div>
+    <div style="height: 4px; width: 30px; background-color: #fd7e14"></div>
+  </div>
+
+<div class="container">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    {% for image_url in image_urls %}
+    <div class="col">
+      <div class="card">
+        <div class="ratio ratio-16x9">
+          <img
+            src="{{ image_url }}"
+            alt="Uploaded Image"
+            class="img-fluid rounded"
+            style="object-fit: cover;"
+          />
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}

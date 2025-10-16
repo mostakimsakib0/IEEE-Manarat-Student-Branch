@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Noor Library Notification</title>
+</head>
+<body style="margin:0; padding:0; font-family:Arial, sans-serif; background-color:#f9f9f9;">
+
+  <table width="100%" bgcolor="#f9f9f9" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+      <td align="center">
+        <table width="600" cellpadding="0" cellspacing="0" border="0" style="background:#ffffff; margin:20px auto; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.05);">
+          
+          <!-- Header -->
+          <tr>
+            <td bgcolor="#0d6efd" style="padding:20px; border-top-left-radius:8px; border-top-right-radius:8px;">
+              <h2 style="color:#ffffff; margin:0; text-align:center;">📚 Noor Library</h2>
+            </td>
+          </tr>
+
+          <!-- Body -->
+          <tr>
+            <td style="padding:30px; color:#333333;">
+
+              <p>Hi <strong>{{ user.username }}</strong>,</p>
+
+              {% if action == "deposit" %}
+                <p>We’ve successfully received your deposit of <strong>${{ amount }}</strong> on {{ date }}.</p>
+                <p>Your updated balance is: <strong>${{ balance }}</strong></p>
+              {% elif action == "purchase" %}
+                <p>You have successfully purchased the book <strong>“{{ book_title }}”</strong> for <strong>${{ amount }}</strong> on {{ date }}.</p>
+                <p>We hope you enjoy your read!</p>
+              {% elif action == "return" %}
+                <p>You have returned the book <strong>“{{ book_title }}”</strong> on {{ date }}.</p>
+                <p><strong>${{ amount }}</strong> has been refunded to your account. Your updated balance is <strong>${{ balance }}</strong>.</p>
+              {% endif %}
+
+              <p style="margin-top:30px;">Thank you for using Noor Library!</p>
+              <p>📖 Happy Reading,<br/>The Noor Library Team</p>
+
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td bgcolor="#f1f1f1" style="padding:15px; text-align:center; font-size:12px; color:#888888; border-bottom-left-radius:8px; border-bottom-right-radius:8px;">
+              &copy; {{ now.year }} Noor Library. All rights reserved.
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>

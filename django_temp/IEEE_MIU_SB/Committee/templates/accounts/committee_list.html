@@ -1,0 +1,90 @@
+{% extends "base.html" %} {% block content %} {% load static %}
+<div class="text-center my-5">
+  <h1 class="fw-bold" style="color: #0c5c3b">IEEE Manarat SB Committee</h1>
+  <p>Fostering growth, collaboration, and excellence through leadership.</p>
+  <h6 class="text-muted" style="color: #ff7f11">Session {{session}}</h6>
+  <div class="d-flex justify-content-center mt-2">
+    <div
+      style="
+        height: 3px;
+        width: 60px;
+        background-color: #0c5c3b;
+        margin-right: 8px;
+      "
+    ></div>
+    <div style="height: 3px; width: 30px; background-color: #ff7f11"></div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    {% for committee in committees %} {% if committee.is_valid %}
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 block-animation">
+      <div class="our-team committee-card">
+        <div class="picture">
+          {% if committee.profile_picture %}
+          <img
+            class="img-fluid"
+            src="{{ committee.profile_picture.url }}"
+            alt="{{ committee.user.first_name }}'s Profile Picture"
+          />
+          {% elif committee.gender %} {% if committee.gender == "male" %}
+          <img
+            class="img-fluid"
+            src="{% static 'image/male-profile.jpg' %}"
+            alt="Default Male Profile Picture"
+          />
+          {% endif %} {% if committee.gender == "female" %}
+          <img
+            class="img-fluid"
+            src="{% static 'image/muslim-woman.jpg' %}"
+            alt="Default Female Profile Picture"
+          />
+          {% endif %} {% endif %}
+        </div>
+        <br />
+        <small>{{ session }}</small>
+        <div class="team-content">
+          <h3 class="name">
+            {{ committee.user.first_name }} {{ committee.user.last_name }}
+          </h3>
+          <h4 class="title" style="color: #a63603">
+            {{ committee.get_designation_display }}
+          </h4>
+        </div>
+        <ul class="social">
+          <li>
+            {% if committee.facebook_profile %}
+            <a
+              href="{{ committee.facebook_profile }}"
+              class="fa-brands fa-facebook rounded-5"
+              aria-hidden="true"
+            ></a>
+            {% endif %}
+          </li>
+          <li>
+            
+            {% if committee.linkedin_profile %}
+            <a
+            href="{{ committee.linkedin_profile }}"
+            class="fa-brands fa-linkedin rounded-5"
+            aria-hidden="true"
+            ></a>
+            {% endif %}
+          </li>
+          <li>
+            {% if committee.user.email %}
+            <a
+            href="mailto:{{ committee.user.email }}"
+            class="fa-solid fa-envelope rounded-5"
+            aria-hidden="true"
+            ></a>
+            {% endif %}
+          </li>
+        </ul>
+      </div>
+    </div>
+    {% endif %} {% endfor %}
+  </div>
+</div>
+{% endblock %}

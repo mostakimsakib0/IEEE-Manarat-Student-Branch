@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+
+      <!-- Update Profile Card -->
+      <div class="card shadow-lg border-0 rounded-4 overflow-hidden">
+        <!-- Header -->
+        <div class="card-header bg-warning text-dark text-center py-4">
+          <h3 class="mb-0 fw-bold">
+            <i class="bi bi-pencil-square me-2"></i>Update Profile
+          </h3>
+          <p class="mb-0 small">Keep your personal information up to date</p>
+        </div>
+
+        <!-- Form -->
+        <div class="card-body bg-light p-4">
+          <form method="post"  enctype="multipart/form-data" autocomplete="off">
+            {% csrf_token %} {% if form.non_field_errors %} 
+            {% for er in form.non_field_errors %}
+            <div class="alert alert-danger">{{ er }}</div>
+            {% endfor %} {% endif %}
+
+            <!--{{ form|crispy }}-->
+
+            {% for fm in form %}
+            <div class="mb-3">
+              {{ fm.label_tag }} {{ fm }} {% if fm.errors %}
+              <div class="text-danger small">{{ fm.errors|striptags }}</div>
+              {% endif %}
+            </div>
+            {% endfor %}
+            <div class="d-grid mt-4">
+              <button type="submit" class="btn btn-warning btn-lg rounded-pill text-white">
+                <i class="bi bi-save me-2"></i>Save Changes
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Back to Profile -->
+      <div class="text-center mt-4">
+        <a href="{% url 'profile' %}" class="btn btn-outline-secondary btn-sm rounded-pill px-4">
+          <i class="bi bi-arrow-left-circle me-1"></i>Back to Profile
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+{% endblock %}
