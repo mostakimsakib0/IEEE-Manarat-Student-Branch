@@ -1,0 +1,81 @@
+{{ define "main" }}
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-lg-8">
+      <article class="event-single">
+        <h1 class="event-title mb-3">{{ .Title }}</h1>
+        
+        <div class="event-meta mb-4">
+          <div class="row">
+            <div class="col-md-6">
+              <p class="mb-2">
+                <i class="fa-solid fa-calendar-days text-success"></i>
+                <strong>Date:</strong> {{ .Params.date | dateFormat "January 2, 2006" }}
+              </p>
+            </div>
+            <div class="col-md-6">
+              <p class="mb-2">
+                <i class="fa-solid fa-location-dot text-success"></i>
+                <strong>Location:</strong> {{ .Params.location }}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {{ if .Params.image }}
+        <div class="event-image mb-4">
+          <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}" class="img-fluid rounded">
+        </div>
+        {{ end }}
+
+        <div class="event-summary mb-4 p-3 bg-light rounded">
+          <h5>Event Summary</h5>
+          <p>{{ .Params.summary }}</p>
+        </div>
+
+        <div class="event-content">
+          {{ .Content }}
+        </div>
+
+        <div class="event-actions mt-5">
+          <a href="{{ "/events/" | relURL }}" class="btn btn-outline-success">
+            <i class="fa-solid fa-arrow-left"></i> Back to Events
+          </a>
+        </div>
+      </article>
+    </div>
+
+    <div class="col-lg-4">
+      <div class="sidebar">
+        <div class="widget">
+          <h5 class="widget-title">Recent Events</h5>
+          <div class="recent-events">
+            {{ range first 5 (where .Site.RegularPages "Section" "events") }}
+            {{ if ne .Permalink $.Permalink }}
+            <div class="recent-event-item mb-3">
+              <a href="{{ .Permalink }}" class="text-decoration-none">
+                <h6 class="mb-1">{{ .Title }}</h6>
+                <small class="text-muted">
+                  {{ .Params.date | dateFormat "Jan 2, 2006" }}
+                </small>
+              </a>
+            </div>
+            {{ end }}
+            {{ end }}
+          </div>
+        </div>
+
+        <div class="widget">
+          <h5 class="widget-title">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="{{ "/committee/" | relURL }}" class="text-decoration-none">Committee</a></li>
+            <li><a href="{{ "/gallery/" | relURL }}" class="text-decoration-none">Gallery</a></li>
+            <li><a href="{{ "/contact/" | relURL }}" class="text-decoration-none">Contact Us</a></li>
+            <li><a href="{{ "/about/" | relURL }}" class="text-decoration-none">About IEEE MIU</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}

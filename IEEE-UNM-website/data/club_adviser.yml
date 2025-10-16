@@ -1,0 +1,26 @@
+enable: true
+title: Our Advisory Panel
+advisors:
+  - name: "Prof. Dr. Mijanur Rahman"
+    image: "image/deen.jpg"
+    role: "Counselor"
+    title: "Dean, School of Science and Engineering"
+    link: "https://cse.manarat.ac.bd/faculty/dr-md-mijanur-rahman"
+  
+  - name: "Prof. Md. Ershadul H. Choudhury"
+    image: "image/ershad-sir.jpg"
+    role: "Endorser"
+    title: "Head, Department of EEE"
+    link: "https://eee.manarat.ac.bd/faculty/md-ershadul-h-choudhury"
+  
+  - name: "Mir Md. Aminuzzaman"
+    image: "image/aminuzzaman-sir.png"
+    role: "Advisor"
+    title: "Assistant Professor"
+    link: "https://eee.manarat.ac.bd/faculty/mir-md-aminuzzaman"
+  
+  - name: "Md Shamimul Islam"
+    image: "image/shamim-sir.jpg"
+    role: "Advisor"
+    title: "Lecturer"
+    link: "https://cse.manarat.ac.bd/faculty/md-shamimul-islam"

@@ -1,0 +1,77 @@
+content:
+  - title   : About IEEE Manarat Student Branch
+    description: IEEE Manarat Student Branch is the student chapter of the Institute of Electrical and Electronics Engineers (IEEE) at Manarat International University (MIU), Dhaka, Bangladesh.
+    enable  : true
+    image   : images/logo-png.png
+    button:
+      enable: false
+      label: "View Works"
+      link: "project/"
+    list:
+      enable: true
+      bullet_icon: ion-ios-bolt
+      point:
+        - We are a dynamic student community fostering technological innovation and professional development.
+        - We organize workshops, seminars, competitions, and networking events throughout the academic year.
+        - Our members gain access to global IEEE resources, publications, and professional networks.
+
+  - title: Our Mission
+    description: To create a vibrant platform where aspiring engineers can explore cutting-edge technologies, develop leadership skills, network with industry professionals, and contribute to society through innovative projects.
+    enable: true
+    image: images/about/aim.png
+    button:
+      enable: false
+      label: "View Works"
+      link: "project/"
+
+  - title: What We Do
+    enable: true
+    image   : images/about/objective.png
+    button:
+      enable: false
+      label: "View Works"
+      link: "project/"
+    list:
+      enable: true
+      bullet_icon: ion-android-checkmark-circle
+      point:
+        - Technical workshops on AI/ML, IoT, Robotics, and Cybersecurity
+        - Programming competitions and hackathons
+        - Professional development and career guidance programs
+        - Industry networking events and mentorship opportunities
+        - Community service and technology for social good projects
+        - To promote the international organization IEEE.
+
+  - title: Vision
+    description: To create a rapport community that fosters great teamwork and inspires lifelong-learning in
+                  the field of Electrical and Electronic Engineering. 
+    enable: true
+    bg_image: images/about/23-24_committee.jpg
+    image   : images/about/eye.png
+    button:
+      enable: false
+      label: "View Works"
+      link: "project/"
+
+  - title: Connect With Us
+    description: Stay updated with our latest activities and join our community of technology enthusiasts. Follow us on social media and participate in our events to be part of the IEEE Manarat Student Branch family.
+    enable: true
+    image   : images/about/rocket.png
+    button:
+      enable: true
+      label: "Follow Us"
+      link: "https://www.facebook.com/miu.ieee.sb"
+
+# aboutItem:
+#   - title : Why Choose Us
+#     description: > 
+#       #WhyNott
+
+#   - title : What You Get
+#     description: > 
+#       Brain damage
+
+#   - title : Meet The Energy
+#     description: > 
+#       Slay
+

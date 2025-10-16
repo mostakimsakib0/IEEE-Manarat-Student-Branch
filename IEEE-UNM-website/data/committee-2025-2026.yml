@@ -1,0 +1,102 @@
+enable: true
+session: "2025-2026"
+title: "IEEE Manarat Student Branch Executive Committee 2025-2026"
+members:
+  - name: "Istiak Ahmed Anik"
+    position: "Chairperson"
+    designation: 1
+    gender: "male"
+    image: "image/male-profile.jpg"
+    facebook: ""
+    linkedin: ""
+    email: ""
+  
+  - name: "Md Monirul Islam"
+    position: "Vice Chairperson (Activity)"
+    designation: 2
+    gender: "male"
+    image: "image/male-profile.jpg"
+    facebook: ""
+    linkedin: ""
+    email: ""
+  
+  - name: "Md Mostakim Ahmed Sakib"
+    position: "Vice Chairperson (Technical)"
+    designation: 3
+    gender: "male"
+    image: "image/male-profile.jpg"
+    facebook: ""
+    linkedin: ""
+    email: ""
+  
+  - name: "Al Jabir"
+    position: "General Secretary"
+    designation: 4
+    gender: "male"
+    image: "image/male-profile.jpg"
+    facebook: ""
+    linkedin: ""
+    email: ""
+  
+  - name: "Jakariya Abbas"
+    position: "Treasurer"
+    designation: 5
+    gender: "male"
+    image: "image/male-profile.jpg"
+    facebook: ""
+    linkedin: ""
+    email: ""
+  
+  - name: "Arshad Al Galib"
+    position: "Program Committee Chair"
+    designation: 6
+    gender: "male"
+    image: "image/male-profile.jpg"
+    facebook: ""
+    linkedin: ""
+    email: ""
+  
+  - name: "Mishila Marowa"
+    position: "Women In Society"
+    designation: 7
+    gender: "female"
+    image: "image/muslim-woman.jpg"
+    facebook: ""
+    linkedin: ""
+    email: ""
+  
+  - name: "Ahmad Hasan Mubashshir"
+    position: "Technical Coordinator"
+    designation: 9
+    gender: "male"
+    image: "image/male-profile.jpg"
+    facebook: ""
+    linkedin: ""
+    email: ""
+  
+  - name: "Md Jahidul Islam"
+    position: "Member Development Coordinator"
+    designation: 8
+    gender: "male"
+    image: "image/male-profile.jpg"
+    facebook: ""
+    linkedin: ""
+    email: ""
+  
+  - name: "Nasrullah Khan Ferdaus"
+    position: "Publicity Coordinator"
+    designation: 10
+    gender: "male"
+    image: "image/male-profile.jpg"
+    facebook: ""
+    linkedin: ""
+    email: ""
+  
+  - name: "Md Aminul Islam Suptho"
+    position: "Webmaster"
+    designation: 11
+    gender: "male"
+    image: "image/male-profile.jpg"
+    facebook: ""
+    linkedin: ""
+    email: ""

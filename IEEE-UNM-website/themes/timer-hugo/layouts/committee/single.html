@@ -1,0 +1,77 @@
+{{ define "main" }}
+<div class="text-center my-5">
+  <h1 class="fw-bold" style="color: #0c5c3b">{{ .Title }}</h1>
+  <p>Fostering growth, collaboration, and excellence through leadership.</p>
+  <h6 class="text-muted" style="color: #ff7f11">Session {{ .Params.session }}</h6>
+  <div class="d-flex justify-content-center mt-2">
+    <div
+      style="
+        height: 3px;
+        width: 60px;
+        background-color: #0c5c3b;
+        margin-right: 8px;
+      "
+    ></div>
+    <div style="height: 3px; width: 30px; background-color: #ff7f11"></div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    {{ with index .Site.Data "committee-2025-2026" }}
+    {{ range .members }}
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 block-animation">
+      <div class="our-team committee-card">
+        <div class="picture">
+          <img
+            class="img-fluid"
+            src="{{ .image | relURL }}"
+            alt="{{ .name }}'s Profile Picture"
+          />
+        </div>
+        <br />
+        <small>{{ $.Params.session }}</small>
+        <div class="team-content">
+          <h3 class="name">
+            {{ .name }}
+          </h3>
+          <h4 class="title" style="color: #a63603">
+            {{ .position }}
+          </h4>
+        </div>
+        <ul class="social">
+          {{ if .facebook }}
+          <li>
+            <a
+              href="{{ .facebook }}"
+              class="fa-brands fa-facebook rounded-5"
+              aria-hidden="true"
+            ></a>
+          </li>
+          {{ end }}
+          {{ if .linkedin }}
+          <li>
+            <a
+            href="{{ .linkedin }}"
+            class="fa-brands fa-linkedin rounded-5"
+            aria-hidden="true"
+            ></a>
+          </li>
+          {{ end }}
+          {{ if .email }}
+          <li>
+            <a
+            href="mailto:{{ .email }}"
+            class="fa-solid fa-envelope rounded-5"
+            aria-hidden="true"
+            ></a>
+          </li>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+    {{ end }}
+    {{ end }}
+  </div>
+</div>
+{{ end }}

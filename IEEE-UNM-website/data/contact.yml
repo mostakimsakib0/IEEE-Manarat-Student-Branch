@@ -1,0 +1,22 @@
+enable  : true
+contactFormTitle    : Contact IEEE Manarat Student Branch
+contactFormSubtitle : > 
+  We're excited to connect with fellow students, professionals, and organizations interested in technology and innovation!
+mapTitle    : Manarat International University Location
+mapSubtitle : >
+  Visit us at Manarat International University, Dhaka!
+officeAddress : Manarat International University, Dhaka, Bangladesh
+mail : ieee.miu.sb@manarat.ac.bd
+phone1: not used
+phone2: not used
+
+socials:
+  - name: Facebook
+    username: miu.ieee.sb
+    icon: ion-social-facebook
+    url: "https://www.facebook.com/miu.ieee.sb"
+
+  - name: LinkedIn
+    username: ieee-manarat-sb
+    icon: ion-social-linkedin
+    url: "https://www.linkedin.com/company/ieee-manarat-sb/"

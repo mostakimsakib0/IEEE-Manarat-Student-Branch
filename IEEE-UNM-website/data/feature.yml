@@ -1,0 +1,28 @@
+enable: true
+title: Why Join IEEE?
+subtitle: Discover the benefits of being part of the world's largest technical organization
+features:
+  - icon: "fa-solid fa-earth-americas"
+    title: "Global Network"
+    description: "Gain access to a worldwide community of over 400,000 engineers, researchers, and innovators."
+    color: "#0b374d"
+
+  - icon: "fas fa-book-open"  
+    title: "Exclusive Resources"
+    description: "Get access to IEEE Xplore, research papers, technical magazines, and cutting-edge innovations."
+    color: "#d2b53b"
+
+  - icon: "fas fa-tools"
+    title: "Skill Building"
+    description: "Attend workshops, seminars, and hands-on events that enhance your technical and soft skills."
+    color: "#1286a8"
+
+  - icon: "fas fa-rocket"
+    title: "Career Boost"
+    description: "Find internships, jobs, mentorship, scholarships, and professional certifications to accelerate your career."
+    color: "#fd7e14"
+
+  - icon: "fas fa-lightbulb"
+    title: "Innovate & Impact"
+    description: "Collaborate on real-world projects, competitions, and initiatives that make a difference in society."
+    color: "#28a745" 

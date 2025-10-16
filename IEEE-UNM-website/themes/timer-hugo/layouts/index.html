@@ -1,0 +1,193 @@
+{{ define "main" }}
+<div class="header finisher-header" style="width: 100%; height: 750px">
+  <div class="d-flex justify-content-center align-items-center">
+    <img
+      class="w-75"
+      src="{{ "image/cover-img-1.png" | relURL }}"
+      alt="heading-img"
+    />
+  </div>
+</div>
+
+<div>
+  <div class="container text-center mt-3 block-animation">
+    <h1 class="text-anuimation">Advisory Panel</h1>
+    <div class="d-flex justify-content-center align-items-center mt-3">
+      <div
+        style="
+          height: 4px;
+          width: 60px;
+          background-color: #28a745;
+          margin-right: 8px;
+        "
+      ></div>
+      <div style="height: 4px; width: 30px; background-color: #fd7e14"></div>
+    </div>
+  </div>
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      {{ with .Site.Data.club_adviser }}
+      {{ range .advisors }}
+      <div class="col-md-3 text-center mt-md-3 mt-4 block-animation">
+        <div class="advisor-card m-auto">
+          <div class="picture">
+            <img
+              class="img-fluid"
+              src="{{ .image | relURL }}"
+              alt="{{ .name }}"
+            />
+          </div>
+        </div>
+        <h5>
+          {{ if .link }}
+          <a
+            href="{{ .link }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-decoration-none text-success"
+          >
+            {{ .name }}
+          </a>
+          {{ else }}
+          {{ .name }}
+          {{ end }}
+        </h5>
+        <h6 class="mb-0">{{ .role }}</h6>
+        <small>{{ .title }}</small>
+      </div>
+      {{ end }}
+      {{ end }}
+    </div>
+  </div>
+</div>
+
+<hr class="w-75 m-auto my-5" />
+
+<div>
+  <h1 class="text-center mb-5">Why Join IEEE?</h1>
+  <ul class="ul-banner-cards">
+    {{ with .Site.Data.feature }}
+    {{ range .features }}
+    <li style="--accent-color: {{ .color }}">
+      <div class="icon"><i class="{{ .icon }}"></i></div>
+      <div class="title">{{ .title }}</div>
+      <div class="descr">{{ .description }}</div>
+    </li>
+    {{ end }}
+    {{ end }}
+  </ul>
+</div>
+
+<hr class="w-75 m-auto my-5" />
+
+<div class="price-conatainer container">
+  <h1>Choose the plan that fits for you</h1>
+  <p>
+    Become a part of a global engineering network. Choose the membership that
+    suits your goals.
+  </p>
+
+  <div class="pricing gap-4">
+    <div class="plan popular">
+      <span>Most Popular</span>
+      <h2>IEEE International Membership</h2>
+      <div class="price">1000৳/Year</div>
+      <ul class="features">
+        <li><i class="fas fa-check-circle"></i> Global IEEE Membership</li>
+        <li>
+          <i class="fas fa-check-circle"></i> Access to IEEE Digital Library
+        </li>
+        <li>
+          <i class="fas fa-check-circle"></i> Student benefits & scholarships
+        </li>
+        <li>
+          <i class="fas fa-check-circle"></i> Enjoy discounts on IEEE
+          conferences
+        </li>
+        <li>
+          <i class="fas fa-check-circle"></i> Participate in global contests
+        </li>
+      </ul>
+      <button>Contact Us</button>
+    </div>
+    <div class="plan popular">
+      <h2>IEEE Branch Membership</h2>
+      <div class="price">200৳/Year</div>
+      <ul class="features">
+        <li><i class="fas fa-check-circle"></i> Local branch membership</li>
+        <li>
+          <i class="fas fa-check-circle"></i> Access to branch events/workshops
+        </li>
+        <li>
+          <i class="fas fa-check-circle"></i> Networking with fellow students
+        </li>
+        <li><i class="fas fa-check-circle"></i> Leadership & volunteering</li>
+        <li>
+          <i class="fas fa-times-circle"></i> No IEEE ID or global IEEE benefits
+        </li>
+      </ul>
+      <button>Contact Us</button>
+    </div>
+  </div>
+</div>
+
+<hr class="w-75 m-auto my-5" />
+
+<div class="container text-center mt-5">
+  <h1>Event Spotlight</h1>
+  <p class="text-muted fs-5">
+    Explore the highlights of our impactful events and vibrant moments.
+  </p>
+  <div class="d-flex justify-content-center align-items-center mt-3">
+    <div
+      style="
+        height: 4px;
+        width: 60px;
+        background-color: #28a745;
+        margin-right: 8px;
+      "
+    ></div>
+    <div style="height: 4px; width: 30px; background-color: #fd7e14"></div>
+  </div>
+</div>
+
+<div class="infinite-scroll-container">
+  <div class="infinite-scroll-track">
+    {{ range first 6 (where .Site.RegularPages "Section" "events") }}
+    <div class="infinite-scroll-card card shadow h-100 w-100">
+      <div class="ratio ratio-16x9">
+        {{ if .Params.image }}
+        <img
+          src="{{ .Params.image | relURL }}"
+          class="card-img-top"
+          loading="lazy"
+          alt="{{ .Title }}"
+        />
+        {{ end }}
+      </div>
+      <div class="card-body p-3 p-xl-5">
+        <small>
+          <i class="fa-solid fa-calendar-days"></i> 
+          {{ if .Params.date }}{{ .Params.date | dateFormat "January 2, 2006" }}{{ end }}
+        </small>
+        <h3 class="card-title h5 mt-2 mb-2">{{ .Title }}</h3>
+        <small>
+          <i class="fa-solid fa-location-dot"></i> {{ .Params.location }}
+        </small>
+        <p class="card-text mt-2">{{ .Params.summary | truncate 100 }}</p>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</div>
+
+<button class="morphing-button m-auto">
+  <span>
+    <a class="text-decoration-none text-white" href="{{ "/events/" | relURL }}">
+      Explore More
+    </a>
+  </span>
+  <i class="fas fa-arrow-right"></i>
+</button>
+
+{{ end }}

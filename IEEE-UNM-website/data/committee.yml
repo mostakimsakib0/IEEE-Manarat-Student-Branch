@@ -1,0 +1,81 @@
+enable: true
+title: IEEE MIU SB Committee
+sessions:
+  - session: "2025-2026"
+    members:
+      - name: Istiak Ahmed Anik
+        position: Chair
+        image: images/committee/istiak-ahmed-anik.jpg
+        description: ""
+        linkedin: ""
+        email: ""
+
+      - name: Md Monirul Islam
+        position: Vice Chair (Activity)
+        image: images/committee/md-monirul-islam.jpg
+        description: ""
+        linkedin: ""
+        email: ""
+
+      - name: Md Mostakim Ahmed Sakib
+        position: Vice Chair (Technical)
+        image: images/committee/md-mostakim-ahmed-sakib.jpg
+        description: ""
+        linkedin: ""
+        email: ""
+
+      - name: Al Jabir
+        position: General Secretary
+        image: images/committee/al-jabir.jpg
+        description: ""
+        linkedin: ""
+        email: ""
+
+      - name: Jakariya Abbas
+        position: Treasurer
+        image: images/committee/jakariya-abbas.jpg
+        description: ""
+        linkedin: ""
+        email: ""
+
+      - name: Arshad Al Galib
+        position: Program Coordinator
+        image: images/committee/arshad-al-galib.jpg
+        description: ""
+        linkedin: ""
+        email: ""
+
+      - name: Mishila Marowa
+        position: Women Secretary
+        image: images/committee/mishila-marowa.jpg
+        description: ""
+        linkedin: ""
+        email: ""
+
+      - name: Ahmad Hasan Mubashshir
+        position: Technical Coordinator
+        image: images/committee/ahmad-hasan-mubashshir.jpg
+        description: ""
+        linkedin: ""
+        email: ""
+
+      - name: Md Jahidul Islam
+        position: Member Development Coordinator
+        image: images/committee/md-jahidul-islam.jpg
+        description: ""
+        linkedin: ""
+        email: ""
+
+      - name: Nasrullah Khan Ferdaus
+        position: Publicity Coordinator
+        image: images/committee/nasrullah-khan-ferdaus.jpg
+        description: ""
+        linkedin: ""
+        email: ""
+
+      - name: Md Aminul Islam Suptho
+        position: Webmaster
+        image: images/committee/md-aminul-islam-suptho.jpg
+        description: ""
+        linkedin: ""
+        email: ""
