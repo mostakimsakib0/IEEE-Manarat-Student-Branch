@@ -3,7 +3,7 @@ title: "IEEE Young Professionals Bangladesh Talk Series 2025 (YPTalk '25)"
 date: 2025-08-16
 location: "MIU Campus, Dhaka"
 summary: "Jointly organized with IEEE Manarat Student Branch, this session explored 'Software-Defined Networking in Emerging Networks' to promote knowledge sharing and professional growth among young engineers."
-image: "images/events/yptalk-2025.jpg"
+image: "static/images/events/2025-2026/IMG-20250814-WA0005(1).jpg"
 featured: true
 draft: false
 ---
